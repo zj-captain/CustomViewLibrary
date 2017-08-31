@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.demo.zoujiang.customviewlibrary.MainActivity">
+    android:orientation="vertical"
+    tools:context="com.demo.zoujiang.customviewlibrary.activity.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.demo.zoujiang.customviewlibrary.viewgroup.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:distance_left="10dp"
+        app:distance_right="10dp"
+        app:isShowLeftImage="false"
+        app:isShowLeftText="true"
+        app:isShowRightImage="false"
+        app:isShowRightText="true"
+        app:title="标题"
+        app:tv_left="返回"
+        app:tv_right="完成" />
 
-</android.support.constraint.ConstraintLayout>
+    <com.demo.zoujiang.customviewlibrary.viewgroup.FoldableViewGroup
+        android:id="@+id/foldableView"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:text="廖俊文是个大傻瓜，和牛奶一样傻"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
